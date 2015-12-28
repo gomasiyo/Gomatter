@@ -1,0 +1,29 @@
+{
+  "name": "gomatter",
+  "version": "1.0.0",
+  "description": "Gomatter!!",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Goma::NanoHa",
+  "license": "ISC",
+  "dependencies": {
+    "nconf": "^0.8.2",
+    "node-notifier": "^4.4.0",
+    "twitter": "^1.2.5",
+    "window-size": "^0.1.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gomasiyo/Gomatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gomasiyo/Gomatter/issues"
+  },
+  "homepage": "https://github.com/gomasiyo/Gomatter#readme"
+}
