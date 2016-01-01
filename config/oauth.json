@@ -1,0 +1,8 @@
+{
+    "requestTokenUrl": "https://api.twitter.com/oauth/request_token",
+    "accessTokenUrl": "https://api.twitter.com/oauth/access_token",
+    "authenticateUrl": "https://twitter.com/oauth/authenticate?oauth_token=",
+    "version": "1.0A",
+    "signatureMethod": "HMAC-SHA1",
+    "callbackUrl": "oob"
+}
