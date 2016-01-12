@@ -27,7 +27,6 @@ if(!Object.keys(accessConf).length) {
     View.boarder();
     View.br();
     View.systemLog('ユーザーが作成されていません、ユーザーを作成します。');
-    View.br();
 
     var oauth = new OAuth(
         oauthConf.requestTokenUrl,
@@ -84,15 +83,26 @@ if(!Object.keys(accessConf).length) {
 
                 if(err) return process.exit();
 
-                console.log(arguments);
+                OAuthToken.accessToken = token;
+                OAuthToken.aceessSecret = secret;
+
+                callback(null, null);
 
             });
+
+        },
+        function(callback) {
+
+            delete OAuthToken.token;
+            delete OAuthToken.secret;
+            delete OAuthToken.pin;
+
+            View.systemLog('登録が完了しました。再起動してください。');
 
         }
     ]);
 
-
-
-
+} else {
+    process.exit();
 }
 

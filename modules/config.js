@@ -32,4 +32,25 @@ Config.prototype.load = function(file) {
     }
 }
 
+/**
+ *  コンフィグをセーブするメソッド
+ *
+ *  @prams {string} file
+ *  @param {object} data セーブするオブジェクト
+ *  @return boolean
+ */
+Config.prototype.save = function(file, data) {
+
+    var filePath = this.configPath + file;
+    var configJSON = JSON.stringify(data);
+
+    try{
+        return fs.writeFileSync(filePath , configJSON);
+    } catch(e) {
+        if(e.errno == -2) console.error('File Open Error');
+        process.exit();
+    }
+
+}
+
 module.exports = Config;
